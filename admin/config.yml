@@ -13,3 +13,34 @@ collections:
       - {label: "Fecha", name: "date", widget: "datetime"}
       - {label: "Imagen Destacada", name: "thumbnail", widget: "image", required: false}
       - {label: "Cuerpo de la Nota", name: "body", widget: "markdown"}
+
+  - name: "eventos"
+    label: "Eventos"
+    folder: "eventos"
+    create: true
+    fields:
+      - {label: "Título del Evento", name: "title", widget: "string"}
+      - {label: "Fecha de Publicación", name: "date", widget: "datetime"}
+      - {label: "Lugar / Fecha del Evento", name: "lugar", widget: "string", required: false}
+      - {label: "Imagen Destacada", name: "thumbnail", widget: "image", required: false}
+      - {label: "Detalles del Evento", name: "body", widget: "markdown"}
+
+  - name: "deportes"
+    label: "Deportes"
+    folder: "deportes"
+    create: true
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Imagen Destacada", name: "thumbnail", widget: "image", required: false}
+      - {label: "Cuerpo de la Nota", name: "body", widget: "markdown"}
+
+  - name: "pescadito_sanjuanero"
+    label: "Pescadito Sanjuanero"
+    folder: "pescadito"
+    create: true
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Imagen Destacada", name: "thumbnail", widget: "image", required: false}
+      - {label: "Contenido", name: "body", widget: "markdown"}
