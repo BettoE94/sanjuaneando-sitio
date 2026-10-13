@@ -9,6 +9,7 @@ collections:
     folder: "noticias"
     create: true
     fields:
+      - {label: "Plantilla", name: "layout", widget: "hidden", default: "layout.html"}
       - {label: "Título", name: "title", widget: "string"}
       - {label: "Fecha", name: "date", widget: "datetime"}
       - {label: "Imagen Destacada", name: "thumbnail", widget: "image", required: false}
@@ -19,6 +20,7 @@ collections:
     folder: "eventos"
     create: true
     fields:
+      - {label: "Plantilla", name: "layout", widget: "hidden", default: "layout.html"}
       - {label: "Título del Evento", name: "title", widget: "string"}
       - {label: "Fecha de Publicación", name: "date", widget: "datetime"}
       - {label: "Lugar / Fecha del Evento", name: "lugar", widget: "string", required: false}
@@ -30,6 +32,7 @@ collections:
     folder: "deportes"
     create: true
     fields:
+      - {label: "Plantilla", name: "layout", widget: "hidden", default: "layout.html"}
       - {label: "Título", name: "title", widget: "string"}
       - {label: "Fecha", name: "date", widget: "datetime"}
       - {label: "Imagen Destacada", name: "thumbnail", widget: "image", required: false}
@@ -40,6 +43,7 @@ collections:
     folder: "pescadito"
     create: true
     fields:
+      - {label: "Plantilla", name: "layout", widget: "hidden", default: "layout.html"}
       - {label: "Título", name: "title", widget: "string"}
       - {label: "Fecha", name: "date", widget: "datetime"}
       - {label: "Imagen Destacada", name: "thumbnail", widget: "image", required: false}
