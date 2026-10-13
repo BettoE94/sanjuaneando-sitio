@@ -28,7 +28,8 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       
-      {% for post in collections.eventos reversed %}
+    {% for post in collections.all reversed %}
+  {% if post.url contains '/eventos/' and post.url != '/eventos/' %}
         <article class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
           {% if post.data.thumbnail %}
             <img src="{{ post.data.thumbnail }}" alt="Imagen de {{ post.data.title }}" class="w-full h-48 object-cover">
