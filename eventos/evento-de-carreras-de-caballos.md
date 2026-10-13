@@ -1,4 +1,5 @@
 ---
+layout: layout.html
 title: evento de carreras de caballos
 date: 2026-10-13T13:02:00.000-06:00
 lugar: san juan del rio 13 -10 - 2026  no faltes
