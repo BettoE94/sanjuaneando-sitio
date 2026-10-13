@@ -9,12 +9,18 @@
 <body class="bg-gray-100 font-sans">
 
   <!-- Menú Superior -->
-  <nav class="bg-blue-800 text-white p-4 shadow-md">
-    <div class="max-w-5xl mx-auto flex justify-between items-center">
-      <a href="/" class="text-2xl font-bold hover:text-blue-200">SanJuaneando</a>
-      <a href="/admin/" class="text-sm bg-blue-600 px-3 py-1 rounded hover:bg-blue-500">Panel de Noticias</a>
+<nav class="bg-blue-800 text-white p-4 shadow-md">
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+    <a href="/" class="text-2xl font-bold hover:text-blue-200">SanJuaneando</a>
+    <div class="flex space-x-4 text-sm font-semibold">
+      <a href="/" class="hover:text-blue-300">Inicio</a>
+      <a href="/eventos/" class="hover:text-blue-300">Eventos</a>
+      <a href="/deportes/" class="hover:text-blue-300">Deportes</a>
+      <a href="/pescadito/" class="hover:text-blue-300">Pescadito</a>
     </div>
-  </nav>
+    <a href="/admin/" class="text-xs bg-blue-600 px-3 py-1 rounded hover:bg-blue-500">Panel</a>
+  </div>
+</nav>
 
   <!-- Contenedor del Artículo -->
   <main class="max-w-3xl mx-auto p-6 mt-8 bg-white shadow-lg rounded-lg mb-12">
