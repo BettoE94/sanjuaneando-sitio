@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos - SanJuaneando</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Menú Superior -->
+  <nav class="bg-blue-800 text-white p-4 shadow-md">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <a href="/" class="text-2xl font-bold hover:text-blue-200">SanJuaneando</a>
+      <div class="flex space-x-4 text-sm font-semibold">
+        <a href="/" class="hover:text-blue-300">Inicio</a>
+        <a href="/eventos/" class="hover:text-blue-300 font-bold underline">Eventos</a>
+        <a href="/deportes/" class="hover:text-blue-300">Deportes</a>
+        <a href="/pescadito/" class="hover:text-blue-300">Pescadito</a>
+      </div>
+      <a href="/admin/" class="text-xs bg-blue-600 px-3 py-1 rounded hover:bg-blue-500">Panel</a>
+    </div>
+  </nav>
+
+  <!-- Contenido Principal -->
+  <main class="max-w-5xl mx-auto p-4 mt-8">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">Próximos Eventos</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      {% for post in collections.eventos reversed %}
+        <article class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+          {% if post.data.thumbnail %}
+            <img src="{{ post.data.thumbnail }}" alt="Imagen de {{ post.data.title }}" class="w-full h-48 object-cover">
+          {% else %}
+            <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-500">Sin imagen</div>
+          {% endif %}
+          
+          <div class="p-4">
+            <h3 class="text-xl font-bold text-blue-900 mb-2">
+              <a href="{{ post.url }}" class="hover:underline">{{ post.data.title }}</a>
+            </h3>
+            <p class="text-sm text-gray-500">{{ post.date | date: "%d/%m/%Y" }}</p>
+            {% if post.data.lugar %}<p class="text-sm text-gray-700 mt-1">📍 {{ post.data.lugar }}</p>{% endif %}
+            <a href="{{ post.url }}" class="mt-4 inline-block text-blue-600 font-semibold hover:text-blue-800">Ver detalles &rarr;</a>
+          </div>
+        </article>
+      {% endfor %}
+
+    </div>
+  </main>
+
+</body>
+</html>
