@@ -21,6 +21,7 @@ collections:
     create: true
     fields:
       - {label: "Plantilla", name: "layout", widget: "hidden", default: "layout.html"}
+      - {label: "Etiquetas", name: "tags", widget: "hidden", default: "eventos"}
       - {label: "Título del Evento", name: "title", widget: "string"}
       - {label: "Fecha de Publicación", name: "date", widget: "datetime"}
       - {label: "Lugar / Fecha del Evento", name: "lugar", widget: "string", required: false}
